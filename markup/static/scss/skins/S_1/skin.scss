@@ -1,0 +1,294 @@
+body {
+    background-color: $primary-fill;
+    font-weight: $font-weight;
+    color: $primary-text;
+
+}
+
+html {
+    overflow-x: hidden;
+    @include respond-from(to-sm) {
+        font-size: $font-size-xs;
+    }
+
+    font-size: $font-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: $font-size-h1;
+    font-weight: 500;
+    color: $primary-title;
+    text-align: center;
+
+    @include respond-from(sm) {
+        font-size: $font-size-h1-sm;
+        line-height: 36px;
+    }
+
+    @include respond-from(lg) {
+        font-size: $font-size-h1-lg;
+        line-height: 56px;
+    }
+}
+
+h2 {
+    font-size: $font-size-h2;
+    color: $primary-title;
+    text-align: center;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 3px;
+        margin: 10px auto;
+        background: $primary-title-decor;
+        border-radius: 2px;
+        opacity: 0;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+
+    @include respond-from(sm) {
+        font-size: $font-size-h2-sm;
+
+        &:after {
+            width: 130px;
+            height: 4px;
+            margin: 20px auto;
+        }
+    }
+
+    @include respond-from(lg) {
+        font-size: $font-size-h2-lg;
+    }
+}
+
+h3 {
+    font-size: $font-size-h3;
+
+    @include respond-from(sm) {
+        font-size: $font-size-h3-sm;
+    }
+
+    @include respond-from(lg) {
+        font-size: $font-size-h3-lg;
+    }
+}
+
+p {
+    line-height: 24px;
+}
+
+
+//wrappers
+.w-center {
+    width: 100%;
+    max-width: $page-width;
+    margin: 0 auto;
+    padding: 0 $page-horizontal-gap;
+
+    @include respond-from(sm-md) {
+        padding: 0 $page-horizontal-gap-sm;
+    }
+
+    @include respond-from(md-xl) {
+        padding: 0 $page-horizontal-gap-md;
+    }
+}
+
+.w-page-section {
+    & {
+        padding: 40px 0;
+    }
+
+    &--no-bttm {
+        padding: 40px 0 0;
+    }
+
+    &--fill {
+        background: $secondary-fill;
+    }
+
+    &--comments {
+        background: $comments-fill;
+    }
+
+    @include respond-from(sm) {
+        & {
+            padding: 65px 0;
+        }
+
+        &--no-bttm {
+            padding: 65px 0 0;
+        }
+
+    }
+
+
+    @include respond-from(lg) {
+        & {
+            padding: 80px 0;
+        }
+
+        &--no-bttm {
+            padding: 80px 0 0;
+        }
+
+        &--fill {
+            h1 {
+                margin-top: -15px;
+            }
+        }
+
+    }
+
+}
+
+.cl-w-outer {
+
+}
+
+.w-inner {
+    display: flex;
+    flex-direction: column;
+
+    @include respond-from(md) {
+        flex-direction: unset;
+    }
+}
+
+//gap
+
+.w-gap {
+    &___ {
+        margin-top: 40px;
+    }
+}
+
+.w-gap-sm {
+    margin-top: 20px;
+
+    @include respond-from(md) {
+        margin-top: 25px;
+    }
+}
+
+.w-gap-md {
+    margin-top: 25px;
+
+    @include respond-from(md) {
+        margin-top: 30px;
+    }
+}
+
+.w-gap-lg {
+    margin-top: 25px;
+
+    @include respond-from(sm) {
+        margin-top: 40px;
+    }
+
+    @include respond-from(md) {
+        margin-top: 60px;
+    }
+}
+
+.w-gap-xl {
+    margin-top: 25px;
+
+    @include respond-from(sm) {
+        margin-top: 80px;
+    }
+
+    @include respond-from(md) {
+        margin-top: 130px;
+    }
+}
+
+//gap end
+
+.c-text-block {
+    margin: 38px 0;
+    text-align: center;
+
+    p {
+        margin: 0 0 5px;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    span {
+        font-size: 14px;
+    }
+}
+
+.msg-wrap {
+    position: fixed;
+    bottom: 0;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 64px;
+    z-index: 9999;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+
+    .msg {
+        padding: 20px;
+        transform: translate(0px, 0px) !important;
+    }
+}
+
+.error {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    color: red;
+
+}
+
+.page__img {
+    margin: 30px auto;
+
+    img {
+        display: inline-block;
+        min-height: 100%;
+
+        @include support(object-fit, cover) {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+}
+
+.empty-font {
+    font-size: 46px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #161616;
+    text-shadow: -1px -1px 1px #fff, 1px 1px 0px #fff;
+
+    @include respond-from(lg) {
+        margin-top: 150px;
+        font-size: 96px;
+    }
+}
+
+
+.clock {
+    font-size: 94px;
+    font-weight: 600;
+    line-height: .8;
+    color: #363B5D;
+
+    @include respond-from(lg) {
+        font-size: 288px;
+    }
+}

@@ -1,0 +1,27 @@
+mixin header()
+
+    | <!-- ********** header-S-1 ********** -->
+    .header
+        nav.header__navbar
+            .w-center
+                .header__wrapper
+                    .header__brand
+                        a.header__brand-link(href='./index.html') Brand
+
+                    button#burger.header__burger(type='button')
+                        span.header__burger-line
+                        span.header__burger-line
+                        span.header__burger-line
+                        span.header__burger-line
+                    #menu.header__menu
+                        ul.header__menu-inner
+                            li.header__menu-item
+                                a.header__menu-link.active(href='#') Home
+                            li.header__menu-item
+                                a.header__menu-link(href='#') Profile
+                            li.header__menu-item
+                                a.header__menu-link(href='#') Project
+                            li.header__menu-item
+                                a.header__menu-link(href='#') Blog
+                            li.header__menu-item
+                                a.header__menu-link(href='#') Contact

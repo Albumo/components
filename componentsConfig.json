@@ -1,0 +1,19 @@
+{
+  "component_footer": {
+    "number": "S_1",
+    "name": "footer"
+  },
+
+
+
+  "component_form": {
+    "number": "S_1",
+    "name": "form"
+  },
+
+  "component_header": {
+    "number": "S_1",
+    "name": "header"
+  }
+
+}

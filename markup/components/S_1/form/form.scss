@@ -1,0 +1,67 @@
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-flow: row wrap;
+        @include respond-from(xs) {
+            justify-content: space-between;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        max-width: 555px;
+        margin: 0 auto;
+
+        @include respond-from(xs) {
+            margin: 0;
+        }
+    }
+
+    &__group {
+        text-align: left;
+        margin-bottom: 30px;
+        transition: all .5s ease-in-out;
+
+        &:hover,
+        &:active,
+        &:focus {
+
+        }
+
+    }
+
+    &__control {
+        position: relative;
+        padding: 18px;
+        width: 100%;
+        background: transparent;
+        border: 2px solid $form-input-bd;
+        font-size: 18px;
+        color: #fff;
+
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-visible {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: $form-input-placeholder;
+        }
+    }
+
+    @include respond-from(md) {
+        margin: 0 auto 50px;
+    }
+}

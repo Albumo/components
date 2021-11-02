@@ -1,0 +1,22 @@
+include ../components/common/head
+include ../components/common/include-js
+include ../components/common/img-svg
+
+include ../components/%=component_footer=%/footer/footer
+include ../components/%=component_form=%/form/form
+include ../components/%=component_header=%/header/header
+
+
+
+doctype html
+html(class="no-js" lang="en")
+    head
+        +head
+    body
+        .cl-w-outer
+            +header
+            block content
+            +footer
+        +include-js
+
+        block scripts
