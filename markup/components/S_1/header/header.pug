@@ -1,27 +1,28 @@
 mixin header()
 
     | <!-- ********** header-S-1 ********** -->
-    .header
-        nav.header__navbar
-            .w-center
-                .header__wrapper
-                    .header__brand
-                        a.header__brand-link(href='./index.html') Brand
-
-                    button#burger.header__burger(type='button')
-                        span.header__burger-line
-                        span.header__burger-line
-                        span.header__burger-line
-                        span.header__burger-line
-                    #menu.header__menu
-                        ul.header__menu-inner
-                            li.header__menu-item
-                                a.header__menu-link.active(href='#') Home
-                            li.header__menu-item
-                                a.header__menu-link(href='#') Profile
-                            li.header__menu-item
-                                a.header__menu-link(href='#') Project
-                            li.header__menu-item
-                                a.header__menu-link(href='#') Blog
-                            li.header__menu-item
-                                a.header__menu-link(href='#') Contact
+    header.header.js-header
+        .header__wrapper.js-header-toggle.w-center
+            .header__logo LOGO
+            .header__burger-menu-wrap.js-header-burger
+                .header__burger-letter M
+                .header__burger-menu
+                    span
+                    span
+                    span
+                .header__burger-letter N
+                .header__burger-letter U
+            nav.header__nav
+                .header__nav-wrap
+                    .header__navi
+                        ul.header__list
+                            li.header__list-item
+                                a.header__list-link(href="#") LINK 1
+                            li.header__list-item
+                                a.header__list-link(href="#") LINK 2
+                            li.header__list-item
+                                a.header__list-link(href="#") LINK 3
+                            li.header__list-item
+                                a.header__list-link(href="#") LINK 4
+                            li.header__list-item
+                                a.header__list-link(href="#") LINK 5

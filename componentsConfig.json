@@ -11,9 +11,19 @@
     "name": "form"
   },
 
+  "component_cards": {
+    "number": "S_1",
+    "name": "cards"
+  },
+
   "component_header": {
     "number": "S_1",
     "name": "header"
+  },
+
+  "component_grid": {
+    "number": "S_1",
+    "name": "grid"
   }
 
 }
