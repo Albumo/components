@@ -376,3 +376,25 @@ img {
     }
 
 }
+
+.wrapper {
+    position: relative;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.wrapper__content {
+    position: relative;
+    float: left;
+    width: 66%;
+}
+
+#side {
+    width: 100%;
+    max-width: 280px;
+    float: right;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}

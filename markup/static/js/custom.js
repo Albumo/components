@@ -184,3 +184,28 @@ window.onload = function () {
 };
 
 //FORM MESSAGE END
+$(function() {
+    if ($('#sticky-sidebar').length) {
+        let el = $("#sticky-sidebar");
+        let stickyTop = el.offset().top;
+        let stickyHeight = el.height();
+        $(window).scroll(function() {
+            let limit = $('.wrapper__content').outerHeight() - stickyHeight + 20;
+            let windowTop = $(window).scrollTop();
+            if (stickyTop < windowTop) {
+                el.css({
+                    position: 'fixed',
+                    top: '20px'
+                });
+            } else {
+                el.css('position', 'static');
+            }
+            if (limit < windowTop) {
+                let diff = limit - windowTop;
+                el.css({
+                    top: diff
+                });
+            }
+        });
+    }
+});
