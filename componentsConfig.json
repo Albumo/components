@@ -24,6 +24,15 @@
   "component_grid": {
     "number": "S_1",
     "name": "grid"
-  }
+  },
 
+  "component_slider": {
+    "number": "S_1",
+    "name": "slider"
+  },
+
+  "component_new-form": {
+    "number": "S_1",
+    "name": "new-form"
+  }
 }
