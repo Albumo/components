@@ -1,0 +1,27 @@
+mixin new-form
+    .container
+        h3 Register Form
+        .alert.alert-danger.register-alert.hidden(role='alert')
+        form.register-form
+            .form-group
+                label(for='your-name') First Name
+                input#your-name.form-control(type='text' name='name' placeholder='First Name')
+            .form-group
+                label(for='your-second-name') Second Name
+                input#your-second-name.form-control(type='text' name='name' placeholder='Second Name')
+            .form-group
+                label(for='your-country') Country
+                input#your-country.form-control(type='text' name='name' placeholder='Country' requed)
+            .form-group
+                label(for='email') Email address
+                input#email.form-control(type='text' name='email' placeholder='Enter email')
+            .form-group
+                label(for='password')
+                    | Password (
+                    small Contains characters and numbers
+                    | )
+                input#password.form-control(type='password' name='password' placeholder='Password')
+            .form-group
+                label(for='password2') Password Again
+                input#password2.form-control(type='password' name='password2' placeholder='Password')
+            button.btn.btn-default(type='submit') Submit
