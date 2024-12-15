@@ -2,11 +2,9 @@ body {
     background-color: $primary-fill;
     font-weight: $font-weight;
     color: $primary-text;
-
 }
 
 html {
-    overflow-x: hidden;
     @include respond-from(to-sm) {
         font-size: $font-size-xs;
     }
@@ -19,7 +17,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+h1 {
     font-size: $font-size-h1;
     font-weight: 500;
     color: $primary-title;
@@ -35,40 +34,19 @@ h6 {
         line-height: 56px;
     }
 }
-
 h2 {
     font-size: $font-size-h2;
     color: $primary-title;
     text-align: center;
 
-    &:after {
-        content: '';
-        display: block;
-        width: 80px;
-        height: 3px;
-        margin: 10px auto;
-        background: $primary-title-decor;
-        border-radius: 2px;
-        opacity: 0;
-        animation-duration: 1s;
-        animation-fill-mode: both;
-    }
-
     @include respond-from(sm) {
         font-size: $font-size-h2-sm;
-
-        &:after {
-            width: 130px;
-            height: 4px;
-            margin: 20px auto;
-        }
     }
 
     @include respond-from(lg) {
         font-size: $font-size-h2-lg;
     }
 }
-
 h3 {
     font-size: $font-size-h3;
 
@@ -80,19 +58,15 @@ h3 {
         font-size: $font-size-h3-lg;
     }
 }
-
-
-
 p {
-    line-height: 1.3;
+    line-height: 24px;
 }
 
-
-//wrappers
 .w-center {
     width: 100%;
     max-width: $page-width;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
     padding: 0 $page-horizontal-gap;
 
     @include respond-from(sm-md) {
@@ -104,145 +78,13 @@ p {
     }
 }
 
-.w-page-section {
-    & {
-        padding: 40px 0;
-    }
-
-    &--no-bttm {
-        padding: 40px 0 0;
-    }
-
-    &--fill {
-        background: $secondary-fill;
-    }
-
-    &--comments {
-        background: $comments-fill;
-    }
-
-    @include respond-from(sm) {
-        & {
-            padding: 65px 0;
-        }
-
-        &--no-bttm {
-            padding: 65px 0 0;
-        }
-
-    }
-
-
-    @include respond-from(lg) {
-        & {
-            padding: 80px 0;
-        }
-
-        &--no-bttm {
-            padding: 80px 0 0;
-        }
-
-        &--fill {
-            h1 {
-                margin-top: -15px;
-            }
-        }
-
-    }
-
-}
-
-.w-inner {
-    display: flex;
-    flex-direction: column;
-
-    @include respond-from(md) {
-        flex-direction: unset;
-    }
-}
-
-.img-left-text, .img-right-text {
-
-    &__img {
-        margin: 0 auto 20px;
-        max-width: 400px;
-    }
-
-    @include respond-from(sm) {
-        &__img {
-            margin: 0 auto 60px;
-        }
-    }
-
-    @include respond-from(md) {
-        display: flex;
-        align-items: center;
-
-        &__img {
-            min-width: 300px;
-            margin: 0 40px 0 0;
-
-        }
-
-    }
-
-    @include respond-from(lg) {
-        justify-content: space-between;
-
-        &__img {
-            min-width: 450px;
-            max-width: 450px;
-            margin-right: 40px;
-        }
-    }
-
-}
-
-.img-right-text {
-    &__img {
-        margin: 20px auto 0;
-    }
-
-    @include respond-from(sm) {
-        &__img {
-            margin: 60px auto 0;
-        }
-    }
-
-    @include respond-from(md) {
-        display: flex;
-        align-items: center;
-
-        &__img {
-            margin: 0 0 0 40px;
-
-        }
-
-    }
-}
-.fixed-position {
-    position: fixed;
-    left: 0;
-    right: 0;
-}
-
-img {
-    display: inline-block;
-    min-height: 100%;
-
-    @include support(object-fit, cover) {
-        width: 100%;
-        object-fit: cover;
-    }
-}
-
-
-
-//gap
+//--------------------------------------------------GAPS----------------------------------------------//
 
 .w-gap {
-    &___ {
-        margin-top: 40px;
+    margin-top: 30px;
+
+    @include respond-from(md) {
+        margin-top: 50px;
     }
 }
 
@@ -266,11 +108,11 @@ img {
     margin-top: 25px;
 
     @include respond-from(sm) {
-        margin-top: 40px;
+        margin-top: 30px;
     }
 
     @include respond-from(md) {
-        margin-top: 60px;
+        margin-top: 40px;
     }
 }
 
@@ -278,125 +120,19 @@ img {
     margin-top: 25px;
 
     @include respond-from(sm) {
-        margin-top: 80px;
+        margin-top: 35px;
     }
 
     @include respond-from(md) {
-        margin-top: 130px;
+        margin-top: 50px;
     }
 }
 
-//gap end
+//--------------------------------------------------GAPS END----------------------------------------------//
 
-.c-text-block {
-    margin: 38px 0;
-    text-align: center;
-
-    p {
-        margin: 0 0 5px;
-        font-size: 32px;
-        font-weight: bold;
-    }
-
-    span {
-        font-size: 14px;
-    }
-}
-
-.msg-wrap {
-    position: fixed;
-    bottom: 0;
-    left: calc(50% - 100px);
-    width: 200px;
-    height: 64px;
-    z-index: 9999;
-    overflow: hidden;
-    border-radius: 10px 10px 0 0;
-    text-align: center;
-
-    .msg {
-        padding: 20px;
-        transform: translate(0px, 0px) !important;
-    }
-}
-
-.error {
-    position: absolute;
-    top: 0;
-    font-size: 14px;
-    color: red;
-
-}
-
-.page__img {
-    margin: 30px auto;
-
-    img {
-        display: inline-block;
-        min-height: 100%;
-
-        @include support(object-fit, cover) {
-            width: 100%;
-            object-fit: cover;
-        }
-    }
-
-}
-
-.empty-font {
-    font-weight: 900;
-    color: $empty-font-bg;
-    text-shadow: -1px -1px 1px $empty-font, 1px 1px 0px $empty-font;
-
-}
-
-.center {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.btn {
-    @extend %bttn-reset;
-    padding: $btn-padding;
-    color:  $btn-color;
-    background: $btn-bg;
-    border: $btn-bd;
-    box-shadow: $btn-shadow;
-    transition: all .35s ease-in-out;
-
-    &:hover {
-        color: $btn-color-hov;
-        background: $btn-bg-hov;
-        border: $btn-bd-hov;
-        box-shadow: $btn-shadow-hov;
-    }
-
-}
-
-.wrapper {
-    position: relative;
-    margin: 0;
-    padding: 20px;
-    overflow: hidden;
-}
-
-.wrapper__content {
-    position: relative;
-    float: left;
-    width: 80%;
-}
-
-#side {
-    width: 100%;
-    max-width: 15%;
-    float: right;
-    margin: 0 auto;
-    position: relative;
-    padding: 0;
-    overflow: hidden;
+.txt-colored {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1BD895;
+    text-transform: uppercase;
 }

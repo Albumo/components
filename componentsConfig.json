@@ -1,38 +1,78 @@
 {
+  "component_header": {
+    "number": "S_1",
+    "name": "header"
+  },
+
+  "component_selector": {
+    "number": "S_1",
+    "name": "selector"
+  },
+
+
+  "component_delivery": {
+    "number": "S_1",
+    "name": "delivery"
+  },
+
+  "component_banner": {
+    "number": "S_1",
+    "name": "banner"
+  },
+
+  "component_utp": {
+    "number": "S_1",
+    "name": "utp"
+  },
+
+  "component_stepper": {
+    "number": "S_1",
+    "name": "stepper"
+  },
+
+  "component_cases": {
+    "number": "S_1",
+    "name": "cases"
+  },
+
+
   "component_footer": {
     "number": "S_1",
     "name": "footer"
   },
 
+  "component_about": {
+    "number": "S_1",
+    "name": "about"
+  },
 
+  "component_popup": {
+    "number": "S_1",
+    "name": "popup"
+  },
+
+  "component_counter": {
+    "number": "S_1",
+    "name": "counter"
+  },
+
+  "component_analyzing": {
+    "number": "S_1",
+    "name": "analyzing"
+  },
 
   "component_form": {
     "number": "S_1",
     "name": "form"
   },
 
-  "component_cards": {
+  "component_table": {
     "number": "S_1",
-    "name": "cards"
+    "name": "table"
   },
 
-  "component_header": {
+  "component_popup-select": {
     "number": "S_1",
-    "name": "header"
-  },
-
-  "component_grid": {
-    "number": "S_1",
-    "name": "grid"
-  },
-
-  "component_slider": {
-    "number": "S_1",
-    "name": "slider"
-  },
-
-  "component_new-form": {
-    "number": "S_1",
-    "name": "new-form"
+    "name": "popup-select"
   }
 }

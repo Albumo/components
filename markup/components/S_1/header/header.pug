@@ -1,28 +1,20 @@
 mixin header()
-
-    | <!-- ********** header-S-1 ********** -->
-    header.header.js-header
-        .header__wrapper.js-header-toggle.w-center
-            .header__logo LOGO
-            .header__burger-menu-wrap.js-header-burger
-                .header__burger-letter M
-                .header__burger-menu
+    header.header
+        .w-center
+            nav.header_nav
+                a(href='index.html').header_logo
+                    img(src="static/img/content/logo.svg" alt="logo")
+                input#menu-toggle(type='checkbox')
+                label.header_menu-icon(for='menu-toggle')
                     span
                     span
                     span
-                .header__burger-letter N
-                .header__burger-letter U
-            nav.header__nav
-                .header__nav-wrap
-                    .header__navi
-                        ul.header__list
-                            li.header__list-item
-                                a.header__list-link(href="#") LINK 1
-                            li.header__list-item
-                                a.header__list-link(href="#") LINK 2
-                            li.header__list-item
-                                a.header__list-link(href="#") LINK 3
-                            li.header__list-item
-                                a.header__list-link(href="#") LINK 4
-                            li.header__list-item
-                                a.header__list-link(href="#") LINK 5
+                ul.header_menu
+                    li
+                        a(href='#') Home
+                    li
+                        a(href='#') Skills
+                    li
+                        a(href='#') Projects
+                    li
+                        a(href='#') Connect

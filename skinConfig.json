@@ -1,6 +1,6 @@
 {
   "number": "S_1",
-  "theme": "theme_components",
+  "theme": "theme_dark",
   "skins": ["S_1"],
-  "themes": ["theme_components"]
+  "themes": ["theme_dark"]
 }

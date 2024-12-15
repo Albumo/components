@@ -2,25 +2,16 @@ include ../components/common/head
 include ../components/common/include-js
 include ../components/common/img-svg
 
-include ../components/%=component_footer=%/footer/footer
-include ../components/%=component_form=%/form/form
-include ../components/%=component_cards=%/cards/cards
-include ../components/%=component_slider=%/slider/slider
-include ../components/%=component_grid=%/grid/grid
-include ../components/%=component_new-form=%/new-form/new-form
 include ../components/%=component_header=%/header/header
 
-
-
 doctype html
-html(class="no-js" lang="en")
+html(class="no-js" lang="ru")
     head
         +head
     body
-        .cl-w-outer
+        .__cl-w-outer___
             +header
             block content
-            +footer
         +include-js
 
         block scripts
